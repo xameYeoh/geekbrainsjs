@@ -1,0 +1,55 @@
+.square {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin: 0px;
+    color: #000000;
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#boardOuter {
+    height: 225px;
+    width: 225px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+#boardInner {
+    border: solid 1px black;
+    width: 200px;
+    height: 200px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+#numberContainer {
+    width: 200px;
+    height: 25px;
+    margin-left: 24px;
+}
+
+#letterContainer {
+    width: 23px;
+    display: inline-block;
+    height: 200px;
+    margin-top: 1px;
+}
+
+.label {
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    width: 200px;
+    height: 25px;
+}
