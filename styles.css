@@ -1,0 +1,83 @@
+.trigger {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+main {}
+
+.full-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.full-picture-item {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+}
+
+.preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-item {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.active {
+    opacity: 0.5;
+}
+
+.clickable {
+    padding: 100px;
+    border: 1px solid black;
+}
+
+.game-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 1px dashed black;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cell:hover {
+    background-color: rgb(226, 226, 226);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    font-size: 32px;
+    color: blue;
+    font-weight: bold;
+}
+
+.bot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    font-size: 32px;
+    color: red;
+    font-weight: bold;
+}
