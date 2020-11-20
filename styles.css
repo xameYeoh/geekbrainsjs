@@ -98,6 +98,11 @@ main {}
     justify-content: space-between;
 }
 
+.slider-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .products__item-photo {
     width: 250px;
     height: 250px;
