@@ -24,10 +24,41 @@
             <img class="preview-item" src="#" alt="empty image">
 
         </div>
+        <div class="products">
+            <div class="products__item"><img class="products__item-photo"
+                    src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    alt="apple">
+                <p>Name: <span class="products__item-name"></span></p>
+                <p>Price: <span class="products__item-price"></span></p><button id="0" class="buy-button">Buy</button>
+            </div>
+            <div class="products__item"><img class="products__item-photo"
+                    src="https://images.unsplash.com/photo-1587132137056-bfbf0166836e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
+                    alt="banana">
+                <p>Name: <span class="products__item-name"></span></p>
+                <p>Price: <span class="products__item-price"></span></p><button id="1" class="buy-button">Buy</button>
+            </div>
+            <div class="products__item"><img class="products__item-photo"
+                    src="https://images.unsplash.com/photo-1557800636-894a64c1696f?ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80"
+                    alt="tangerine">
+                <p>Name: <span class="products__item-name"></span></p>
+                <p>Price: <span class="products__item-price"></span></p><button id="2" class="buy-button">Buy</button>
+            </div>
+        </div>
+
+        <button class="calculate-cart">Calculate order price</button>
+
+        <div class="cart">
+            <div class="cart__item">
+                <div class="cart__item-name"></div>
+                <div class="cart__item-price"></div>
+            </div>
+            <div class="cart__order-price">0</div>
+        </div>
 
     </main>
 
     <script src="script.js"></script>
+    <script src="cartScript.js"></script>
 </body>
 
 </html>
