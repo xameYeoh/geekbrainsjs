@@ -2,8 +2,8 @@ class Game {
     tickIdentifier = null;
     obstacleIdentifier = null;
     messageEl = document.getElementById('message');
-    scoreEl = document.getElementById('score');
-    counter = 0;
+    score = null;
+
 
 
     init(settings, status, board, snake, menu, food, obstacle) {
@@ -14,7 +14,10 @@ class Game {
         this.menu = menu;
         this.food = food;
         this.obstacle = obstacle;
+
     }
+
+
 
     tick() {
 
@@ -29,8 +32,7 @@ class Game {
         if (this.board.isHeadOnFood()) {
             this.snake.increaseBody();
             this.food.setNewFood();
-            this.counter++;
-            this.setScore();
+            this.score();
 
         }
         this.board.clearBoard();
@@ -100,13 +102,25 @@ class Game {
 
     start() {
         console.log('start', this);
+        this.score = this.createScore();
+        this.score();
         if (!this.status.isPlaying) {
+
             this.status.setPlaying();
             this.tickIdentifier = setInterval(this.tick.bind(this), 1000 / this.settings.speed);
             this.obstacleIdentifier = setInterval(this.createObstacle.bind(this), 3000);
         }
     }
+    createScore() {
+        var scoreEl = document.getElementById('score');
+        var counter = 0;
 
+        function setScore() {
+            scoreEl.innerText = `Score: ${counter}`;
+            return counter++;
+        }
+        return setScore;
+    }
     pause() {
         console.log('pause');
         if (this.status.isPlaying) {
@@ -121,7 +135,4 @@ class Game {
     }
 
 
-    setScore() {
-        this.scoreEl.innerText = `Score: ${this.counter}`;
-    }
 }
